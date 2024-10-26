@@ -15,3 +15,7 @@ photoCount:
 albumCount:
   one: "{{ .photoCount }} in {{ .count }} album"
   other: "{{ .photoCount }} in {{ .count }} albums"
+physicalAddr: No. 317, Zhonghua Rd, Changhua City, Changhua County, Taiwan
+addrTranslation: Address
+telephoneTranslation: Tel
+tel: (04) 729 7999

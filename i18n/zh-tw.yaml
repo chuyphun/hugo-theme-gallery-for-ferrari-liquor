@@ -1,0 +1,19 @@
+menu: 主選單
+home: 主頁
+pageNotFound: 頁面不存在
+toHomepage: 返回主頁
+closeTitle: 關閉
+zoomTitle: 縮放
+arrowPrevTitle: 前一張
+arrowNextTitle: 後一張
+errorMsg: 照片無法載入
+downloadTitle: 下載
+relatedAlbums: 相關相冊
+photoCount:
+  other: "{{ . }} 張照片"
+albumCount:
+  other: "{{ .count }} 個相冊，共計 {{ .photoCount }}"
+physicalAddr: 彰化縣彰化市中華路 317 號
+addrTranslation: 地址
+telephoneTranslation: 電話
+#springbank: 雲頂

@@ -13,3 +13,8 @@ photoCount:
   other: "写真{{ . }}枚"
 albumCount:
   other: "{{ .count }}枚のアルバムに{{ .photoCount }}"
+physicalAddr: 彰化県彰化市中華路317号
+addrTranslation: 住所
+telephoneTranslation: 電話
+openHoursTranslation: 営業時間
+openHours: 12:00 p.m. 〜 8:00 p.m.

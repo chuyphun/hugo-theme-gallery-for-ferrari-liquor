@@ -15,3 +15,7 @@ photoCount:
 albumCount:
   one: "{{ .photoCount }} dans {{ .count }} album"
   other: "{{ .photoCount }} dans {{ .count }} albums"
+physicalAddr: No. 317, Zhonghua Rd, Changhua City, Changhua County, Taiwan
+addrTranslation: Adresse
+telephoneTranslation: Tél
+openHours: 12h00 - 20h00

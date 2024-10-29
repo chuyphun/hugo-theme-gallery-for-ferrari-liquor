@@ -2,4 +2,7 @@
   {{ partial "title.html" . }}
   {{ partial "gallery.html" . }}
   {{ partial "related.html" . }}
+  <hgroup>
+    {{- .Content -}}
+  </hgroup>
 {{ end }}

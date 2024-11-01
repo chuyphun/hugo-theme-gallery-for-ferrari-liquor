@@ -1,0 +1,17 @@
+{{ if .IsTranslated }}
+<h4>{{ i18n "translations" }}</h4>
+<nav>
+  <ul>
+    {{/* range $.Site.Home.AllTranslations */}}
+    {{ range .Translations }}
+    <li class="nav-item">
+      <a href="{{ .RelPermalink }}">
+        {{/* .Params.languageFlag */}}
+        {{/* .Language.LanguageFlag */}}
+        {{ .Language.LanguageName }}
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</nav>
+{{ end }}

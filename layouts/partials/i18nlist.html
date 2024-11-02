@@ -6,8 +6,7 @@
     {{ range .Translations }}
     <li class="nav-item">
       <a href="{{ .RelPermalink }}">
-        {{/* .Params.languageFlag */}}
-        {{/* .Language.LanguageFlag */}}
+        {{ .Language.Params.LanguageFlag }}
         {{ .Language.LanguageName }}
       </a>
     </li>

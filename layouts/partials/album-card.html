@@ -1,3 +1,13 @@
+{{ $c := strings.Split (.Page.Path) "/"}}
+{{/* $type := index $c 1 */}}
+{{ $length := len $c }}
+{{/* $name := index $c (sub ($length) 1) */}}
+{{ $name := last 1 $c }}
+{{/* $brand := index $c (sub ($length) 2) */}}
+{{ $brand := first 1 (last 2 $c) }}
+{{ $ntd := (index (index .Site.Data.price $brand) $name).ntd }}
+
+
 {{ $gallery := partial "get-gallery.html" . }}
 {{ with $gallery }}
   <a class="card" href="{{ .page.RelPermalink }}" title="{{ .page.Title }}">
@@ -12,6 +22,11 @@
         {{ else }}
           {{ T "photoCount" (.imageCount | lang.FormatNumber 0) }}
         {{ end }}
+      </p>
+        {{ with $ntd }}
+          <b>NT$ {{ $ntd }}</b>
+        {{ end }}
+      <p>
       </p>
     </div>
   </a>

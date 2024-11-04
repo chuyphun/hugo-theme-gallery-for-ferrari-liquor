@@ -19,3 +19,7 @@ telephoneTranslation: 電話
 openHoursTranslation: 營業時間
 openHours: 12:00 - 20:00
 #springbank: 雲頂
+yesTranslation: 是
+noTranslation: 否
+ageVerifyTranslation: 你是否已滿 18 歲?
+ageDeniedTranslation: 抱歉，您必須年滿 18 歲才能進入網站。

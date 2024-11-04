@@ -18,3 +18,7 @@ addrTranslation: 住所
 telephoneTranslation: 電話
 openHoursTranslation: 営業時間
 openHours: 12:00 p.m. 〜 8:00 p.m.
+yesTranslation: はい
+noTranslation: いいえ
+ageVerifyTranslation: あなたは18歳以上ですか？
+ageDeniedTranslation: 申し訳ございませんが、このウェブサイトにアクセスするには 18 歳以上である必要があります。

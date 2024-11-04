@@ -1,0 +1,15 @@
+<div id="ageVerificationModal">
+  <div class="modal-content">
+    <h2>{{ i18n "ageVerifyTranslation"}}</h2>
+    <button class="modal-button yes-button" onclick="ageConfirmed()">{{ i18n "yesTranslation"}}</button>
+    <button class="modal-button no-button" onclick="ageDenied()">{{ i18n "noTranslation"}}</button>
+  </div>
+</div>
+
+<script>
+  // We cannot use i18n directly in Javascript files in assets/js/
+  // Defining this var is a workaround (suggested by ChatGPT).
+  const ageDeniedTranslation = "{{ i18n "ageDeniedTranslation" }}"
+</script>
+{{ $script := resources.Get "js/age-verification.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $script.Permalink }}"></script>

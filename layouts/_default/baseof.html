@@ -8,5 +8,6 @@
       {{ block "main" . }}{{ end }}
     </main>
     {{ block "footer" . }}{{ partialCached "footer.html" . }}{{ end }}
+    {{ partial "age-verification.html" . }}
   </body>
 </html>

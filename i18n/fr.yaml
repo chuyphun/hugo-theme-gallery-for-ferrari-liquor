@@ -20,3 +20,7 @@ addrTranslation: Adresse
 telephoneTranslation: Tél
 openHoursTranslation: Horaires d'ouverture
 openHours: 12h00 - 20h00
+yesTranslation: oui
+noTranslation: non
+ageVerifyTranslation: Avez-vous 18 ans ou plus ?
+ageDeniedTranslation: Désolé, mais vous devez avoir au moins 18 ans pour accéder au site.

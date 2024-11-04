@@ -21,3 +21,7 @@ telephoneTranslation: Tel
 openHoursTranslation: Opening Hours
 openHours: 12:00 - 20:00
 tel: (04) 729 7999
+ageVerifyTranslation: Are you 18 or older?
+yesTranslation: "yes"
+noTranslation: "no"
+ageDeniedTranslation: Sorry, but you must be at least 18 years old to enter the website.

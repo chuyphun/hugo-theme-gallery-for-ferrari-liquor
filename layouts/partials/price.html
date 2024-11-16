@@ -1,0 +1,12 @@
+{{ $c := strings.Split (.Page.Path) "/"}}
+{{/* $type := index $c 1 */}}
+{{ $length := len $c }}
+{{/* $name := index $c (sub ($length) 1) */}}
+{{ $name := last 1 $c }}
+{{/* $brand := index $c (sub ($length) 2) */}}
+{{ $brand := first 1 (last 2 $c) }}
+{{ $ntd := (index (index .Site.Data.price $brand) $name).ntd }}
+
+{{ with $ntd }}
+  NT$ {{ $ntd }}
+{{ end }}

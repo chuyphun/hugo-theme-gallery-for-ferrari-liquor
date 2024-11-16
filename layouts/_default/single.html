@@ -1,9 +1,7 @@
 {{ define "main" }}
   {{ partial "title.html" . }}
+  {{/*- .Content -*/}}
   {{ partial "gallery.html" . }}
   {{ partial "related.html" . }}
-  <hgroup>
-    {{- .Content -}}
-  </hgroup>
   {{ partial "i18nlist.html" . }}
 {{ end }}

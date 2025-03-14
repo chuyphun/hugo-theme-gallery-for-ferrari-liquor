@@ -1,12 +1,22 @@
-{{ $c := strings.Split (.Page.Path) "/"}}
-{{/* $type := index $c 1 */}}
-{{ $length := len $c }}
-{{/* $name := index $c (sub ($length) 1) */}}
-{{ $name := last 1 $c }}
-{{/* $brand := index $c (sub ($length) 2) */}}
-{{ $brand := first 1 (last 2 $c) }}
-{{ $ntd := (index (index .Site.Data.price $brand) $name).ntd }}
+{{ $pathSplits := strings.Split (.Page.Path) "/"}}
+{{ $length := len $pathSplits }}
+{{ $category := index $pathSplits 1 }}
+{{/* $category := last 1 (first 2 $pathSplits) */}}
+{{ $name := index $pathSplits (sub ($length) 1) }}
+{{/* $name := last 1 $pathSplits */}}
+{{ $brand := index $pathSplits (sub ($length) 2) }}
+{{/* $brand := first 1 (last 2 $pathSplits) */}}
+{{ $ntd := (index (index (index .Site.Data.price $category) $brand) $name).ntd }}
 
 {{ with $ntd }}
   NT$ {{ $ntd }}
 {{ end }}
+
+<!-- Debugging code
+<br>
+category = {{ $category }}
+<br>
+brand = {{ $brand }}
+<br>
+name = {{ $name }}
+-->

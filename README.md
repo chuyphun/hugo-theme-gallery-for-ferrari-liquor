@@ -11,6 +11,14 @@ A very simple and opinionated photo gallery theme for Hugo.
 
 ---
 
+## TODOs
+- [ ] Add `sold_out` (Boolean) functionality
+    - Refs.
+        - <https://gohugo.io/functions/images/filter/#image-filters>
+            - <https://gohugo.io/functions/images/text/>
+        - <https://gohugo.io/content-management/image-processing/>
+
+
 ## Features
 
 - Responsive design

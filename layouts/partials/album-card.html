@@ -7,13 +7,57 @@
 
 
 {{ $gallery := partial "get-gallery.html" . }}
+{{/* printf "%#v" $gallery */}}
+{{/* debug.Dump $gallery */}}
 {{ with $gallery }}
+  {{/* debug.Dump $.Params */}}
+  {{ $lang := .Lang }}
+  {{ $sold_out := false }}
+  {{ if isset $.Params "sold_out" }}
+    {{ $sold_out = $.Params.sold_out }}
+  {{ end }}
   <a class="card" href="{{ .page.RelPermalink }}" title="{{ .page.Title }}">
     <figure style="background-color: {{ .color }}">
-      <img class="lazyload" width="{{ .thumbnail.Width }}" height="{{ .thumbnail.Height }}" data-src="{{ .thumbnail.RelPermalink }}" alt="{{ .page.Title }}" />
+      {{ if $sold_out }}
+        {{ with .thumbnail }}
+          {{ $text := i18n "soldOut" }}
+          {{ $fontPath := "https://github.com/google/fonts/raw/main/ofl/nikukyu/Nikukyu-Regular.ttf" }}
+          {{ $font := "" }}
+
+          {{ with try (resources.GetRemote $fontPath) }}
+            {{ with .Err }}
+              {{ errorf "%s" . }}
+            {{ else with .Value }}
+              {{ $font = . }}
+            {{ else }}
+              {{ errorf "Unable to get resource %s" $fontPath }}
+            {{ end }}
+          {{ end }}
+
+          font = {{ $font }}
+          {{ $filter := "" }}
+          {{ $opts := dict
+            "color" "#ff0000"
+            "size" 60
+            "x" (mul .Width 0.25 | int)
+            "y" (mul .Height 0.45 | int)
+          }}
+          {{ $filter = images.Text $text $opts }}
+          {{/* with . | images.Filter images.Grayscale | images.Filter $filter */}}
+          {{ with . | images.Filter (images.Pixelate 10) | images.Filter $filter }}
+            <img class="lazyload" width="{{ .Width }}" height="{{ .Height }}" data-src="{{ .RelPermalink }}" />
+          {{ end }}
+        {{ end }}
+      {{ else }}
+        <img class="lazyload" width="{{ .thumbnail.Width }}" height="{{ .thumbnail.Height }}" data-src="{{ .thumbnail.RelPermalink }}" alt="{{ .page.Title }}" />
+      {{ end }}
     </figure>
     <div>
-      <h2>{{ .page.Title }}</h2>
+      {{ if $sold_out }}
+        <h2>{{ i18n "soldOut" }} <del>{{ .page.Title }}</del></h2>
+      {{ else }}
+        <h2>{{ .page.Title }}</h2>
+      {{ end }}
       <p>
         {{ if gt .albumCount 0 }}
           {{ T "albumCount" (dict "count" (.albumCount | lang.FormatNumber 0) "photoCount" (.imageCount | lang.FormatNumber 0 | lang.Translate "photoCount")) }}

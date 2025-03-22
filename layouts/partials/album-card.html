@@ -7,11 +7,8 @@
 
 
 {{ $gallery := partial "get-gallery.html" . }}
-{{/* printf "%#v" $gallery */}}
-{{/* debug.Dump $gallery */}}
 {{ with $gallery }}
   {{/* debug.Dump $.Params */}}
-  {{ $lang := .Lang }}
   {{ $sold_out := false }}
   {{ if isset $.Params "sold_out" }}
     {{ $sold_out = $.Params.sold_out }}
@@ -21,9 +18,9 @@
       {{ if $sold_out }}
         {{ with .thumbnail }}
           {{ $text := i18n "soldOut" }}
-          {{ $fontPath := "https://github.com/google/fonts/raw/main/ofl/nikukyu/Nikukyu-Regular.ttf" }}
-          {{ $font := "" }}
 
+          {{ $fontPath := "https://github.com/notofonts/noto-cjk/raw/main/Sans/OTF/Japanese/NotoSansCJKjp-Black.otf" }}
+          {{ $font := "" }}
           {{ with try (resources.GetRemote $fontPath) }}
             {{ with .Err }}
               {{ errorf "%s" . }}
@@ -34,12 +31,13 @@
             {{ end }}
           {{ end }}
 
-          font = {{ $font }}
           {{ $filter := "" }}
           {{ $opts := dict
-            "color" "#ff0000"
-            "size" 60
-            "x" (mul .Width 0.25 | int)
+            "alignx" "center"
+            "color" "#ffffff"
+            "font" $font
+            "size" (mul (math.Min .Width .Height) 0.12 | int)
+            "x" (mul .Width 0.5 | int)
             "y" (mul .Height 0.45 | int)
           }}
           {{ $filter = images.Text $text $opts }}
@@ -54,7 +52,7 @@
     </figure>
     <div>
       {{ if $sold_out }}
-        <h2>{{ i18n "soldOut" }} <del>{{ .page.Title }}</del></h2>
+        <h2><del>{{ .page.Title }}</del></h2>
       {{ else }}
         <h2>{{ .page.Title }}</h2>
       {{ end }}

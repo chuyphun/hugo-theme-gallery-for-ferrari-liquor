@@ -1,9 +1,21 @@
-{{ if .Title }}
-  <hgroup>
-    <h1>{{ .Title }}</h1>
-    {{ with .Params.Description }}
-      <p>{{ . }}</p>
+<hgroup>
+  {{ $sold_out := false }}
+  {{ if isset .Params "sold_out" }}
+    {{ $sold_out = .Params.sold_out }}
+  {{ end }}
+
+  {{ if .Title }}
+    {{ if $sold_out }}
+      <h1><del>{{ .Title }}</del></h1>
+    {{ else }}
+      <h1>{{ .Title }}</h1>
     {{ end }}
-    <p>{{ partial "price.html" . }}</p>
-  </hgroup>
-{{ end }}
+  {{ end }}
+
+  {{ if $sold_out }}
+    <h2>{{ i18n "soldOut" }}</h2>
+  {{ end }}
+
+  <p>{{ .Params.Description }}</p>
+  <p>{{ partial "price.html" . }}</p>
+</hgroup>

@@ -1,0 +1,28 @@
+menu: Menu
+home: Trang Chủ
+pageNotFound: Không tìm thấy trang này
+toHomepage: Về lại trang chủ
+closeTitle: Đóng
+zoomTitle: Phóng to
+arrowPrevTitle: Trước
+arrowNextTitle: Sau
+errorMsg: Không thể tải ảnh
+downloadTitle: Tải xuống
+relatedAlbums: Album liên quan
+photoCount:
+  one: 1 ảnh
+  other: "{{ . }} ảnh"
+albumCount:
+  one: "{{ .photoCount }} trong {{ .count }} album"
+  other: "{{ .photoCount }} trong {{ .count }} album"
+physicalAddr: Số 317, đường Trung Hoa, thành phố Chương Hóa, huyện Chương Hóa, Đài Loan
+addrTranslation: Địa chỉ
+telephoneTranslation: Điện thoại
+openHoursTranslation: Giờ mở cửa
+openHours: 12:00 - 20:00 (trừ Thứ Năm, Chủ Nhật và các ngày lễ)
+tel: (04) 729 7999
+ageVerifyTranslation: Bạn đã đủ 18 tuổi chưa?
+yesTranslation: "rồi"
+noTranslation: "chưa"
+ageDeniedTranslation: Xin lỗi, bạn phải ít nhất 18 tuổi để truy cập trang web này.
+soldOut: Hết hàng

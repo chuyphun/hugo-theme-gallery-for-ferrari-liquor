@@ -15,3 +15,14 @@ photoCount:
 albumCount:
   one: "{{ .photoCount }} in {{ .count }} Album"
   other: "{{ .photoCount }} in {{ .count }} Alben"
+physicalAddr: No. 317, Zhonghua Rd, Changhua City, Changhua County, Taiwan
+addrTranslation: Adresse
+telephoneTranslation: Tel
+openHoursTranslation: Öffnungszeiten
+openHours: Täglich 12:00 - 20:00 Uhr (außer donnerstags, sonntags und an Feiertagen)
+tel: (04) 729 7999
+ageVerifyTranslation: Sind Sie 18 Jahre oder älter?
+yesTranslation: "Ja"
+noTranslation: "Nein"
+ageDeniedTranslation: Leider müssen Sie mindestens 18 Jahre alt sein, um die Website zu betreten.
+soldOut: Ausverkauft

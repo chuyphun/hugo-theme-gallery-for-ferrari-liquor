@@ -1,0 +1,11 @@
+{{ $jsonSlice := slice }}
+{{- with resources.Get . -}}
+  {{- $rawJsonl := .Content -}}
+  {{- $lines := split $rawJsonl "\n" -}}
+  {{- range $line := $lines -}}
+    {{- with unmarshal $line -}}
+      {{- $jsonSlice = $jsonSlice | append . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $jsonSlice -}}

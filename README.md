@@ -17,6 +17,12 @@ A very simple and opinionated photo gallery theme for Hugo.
         - <https://gohugo.io/functions/images/filter/#image-filters>
             - <https://gohugo.io/functions/images/text/>
         - <https://gohugo.io/content-management/image-processing/>
+- Figure out some Hugo stuffs
+    - [ ] Why `Minify` and `Fingerprint`?
+      ```hugo
+      {{ $script := resources.Get "js/age-verification.js" | resources.Minify | resources.Fingerprint }}
+      <script src="{{ $script.Permalink }}"></script>
+      ```
 
 
 ## Features

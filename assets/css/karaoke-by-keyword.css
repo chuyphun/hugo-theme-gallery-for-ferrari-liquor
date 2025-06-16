@@ -1,0 +1,25 @@
+input#search-input {
+  font-size: 24px;
+}
+
+table.fuzzy-found-songs {
+  border-collapse: collapse;
+  width: 80%;
+  table-layout: fixed;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+tr.fuzzy-found-songs:hover {
+  /*cursor: pointer;*/
+  background-color: #405257;
+}
+
+div#results-container {
+  /*margin-bottom: 30px;*/
+  margin: 30px;
+}

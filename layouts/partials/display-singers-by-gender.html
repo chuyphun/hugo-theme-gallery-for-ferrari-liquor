@@ -1,0 +1,38 @@
+{{- $gender := . -}}
+{{- $filePath := printf "karaoke/hongyin/%s.txt" $gender -}}
+{{- $textResource := resources.Get $filePath -}}
+<center>
+  {{- if not $textResource -}}
+    <p>Error: Couldn't find the text file at {{ $filePath }}</p>
+  {{- else -}}
+    {{- $rawContent := $textResource.Content -}}
+    {{- $entries := split $rawContent "\n" -}}
+
+    {{- if $entries -}}
+      <table class="my-entry-table">
+        <caption>再點選歌手</caption>
+        <tbody>
+          {{- $columnsPerRow := 4 -}}
+          {{/* Not sure which way is faster in Hugo */}}
+          {{/* $rowCount := add (div (len $entries) $columnsPerRow) (gt (math.Mod (len $entries) $columnsPerRow) 0 | int) */}}
+          {{- $rowCount := div (len $entries | float) $columnsPerRow | math.Ceil | int -}}
+
+          {{- range $i := (seq $rowCount) -}}
+            <tr>
+              {{- range $j := (seq $columnsPerRow) -}}
+                {{- $index := add (mul (sub $i 1) $columnsPerRow) (sub $j 1) -}}
+                {{- if lt $index (len $entries) -}} {{/* Check if entry exists for this cell */}}
+                  <td class="clickable">{{- index $entries $index -}}</td>
+                {{- else -}}
+                  <td>&nbsp; {{/* Empty cell if no more entries */}}</td>
+                {{- end -}}
+              {{- end -}}
+            </tr>
+          {{- end -}}
+        </tbody>
+      </table>
+    {{- else -}}
+      <p>No entries found in {{ $filePath }}</p>
+    {{- end -}}
+  {{- end -}}
+</center>

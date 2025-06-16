@@ -1,0 +1,40 @@
+form#singerCategories, caption {
+  font-size: 1.125rem;
+  /*text-align: left;*/
+}
+
+legend.category, caption {
+  font-size: 1.125rem;
+  margin-bottom: 30px;
+}
+
+input.category {
+  vertical-align: middle;
+  font-size: 5.125rem;
+}
+
+table.my-entry-table {
+  width: 80%;
+  font-size: 1.5rem;
+  /*border: 1.0px solid;*/
+  /*border-color: white;*/
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin: 50px;
+}
+
+td.clickable {
+  text-align: center;
+  border: 1.0px solid;
+  border-color: white;
+}
+
+td.clickable {
+  color: #4299e1;
+}
+
+td.clickable:hover {
+  cursor: pointer;
+  /*background-color: #e0f2f7;*/
+  background-color: #405257;
+}

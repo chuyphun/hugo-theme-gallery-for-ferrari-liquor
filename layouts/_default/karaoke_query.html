@@ -1,0 +1,223 @@
+{{ define "main" }}
+  {{ partial "title.html" . }}
+  <div class="search-container">
+    <center>
+    <input type="text" id="searchInput" placeholder="請輸入歌手或歌曲的關鍵字">
+    <style>
+      input[id="searchInput"]
+      {
+        font-size:24px;
+      }
+    </style>
+    </center>
+
+    <center>
+    <div id="resultsContainer"></div>
+    </center>
+  </div>
+
+
+  <script>
+    const songList = JSON.parse('{{ site.Data.hongyin | jsonify | safeJS }}');
+    //const songList = {{ site.Data.hongyin | jsonify }};
+    // Debug
+    //console.log(songList);
+    //document.write(songList);
+    //const parsed = JSON.parse(songList);
+    //console.log(parsed);
+    //document.write(`typeof songList = ${typeof songList}<br>`);
+    //songList.forEach(function(song) {
+    //  console.log(song.name);
+    //});
+
+    //const ul = document.createElement('ul');
+    //songList.forEach(song => {
+    //  const li = document.createElement('li');
+    //  li.textContent = `${song.name} - ${song.singer} (code: ${song.code})`;
+    //  ul.appendChild(li);
+    //});
+    //resultsContainer.appendChild(ul);
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
+  <script>
+    function inPlaceShuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i+1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    function copyShuffle(array) {
+      const indices = Array.from(Array(array.length).keys())
+      inPlaceShuffle(indices);
+      return indices.map(index => array[index]);
+    }
+
+    function songList2Table(songList) {
+      const table = document.createElement('table');
+      // Create table header (thead and tr, th elements)
+      const thead = document.createElement('thead');
+      const headerRow = document.createElement('tr');
+
+      const headers = ['代碼', '歌名', '歌手'];
+      headers.forEach(headerText => {
+        const th = document.createElement('th');
+        th.textContent = headerText;
+        headerRow.appendChild(th);
+      });
+      thead.appendChild(headerRow);
+      table.appendChild(thead);
+
+      // Create table body (tbody and tr, td elements)
+      const tbody = document.createElement('tbody');
+
+      songList.forEach(song => {
+        const row = document.createElement('tr');
+
+        const codeTd = document.createElement('td');
+        const nameTd = document.createElement('td');
+        const singerTd = document.createElement('td');
+        codeTd.textContent = song.code
+        nameTd.textContent = song.name
+        singerTd.textContent = song.singer
+        row.appendChild(codeTd);
+        row.appendChild(nameTd);
+        row.appendChild(singerTd);
+        tbody.appendChild(row);
+      });
+      table.appendChild(tbody);
+
+      // Add some basic styling (optional)
+      table.style.borderCollapse = 'collapse';
+      table.style.width = '70%';
+      table.querySelectorAll('th, td').forEach(cell => {
+        cell.style.border = '1px solid black';
+        cell.style.padding = '8px';
+        cell.style.textAlign = 'left';
+      });
+      return table
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      //console.log("Yeah, DOMContentLoaded!");
+      const searchInput = document.getElementById('searchInput');
+      const resultsContainer = document.getElementById('resultsContainer');
+
+      // 1. Configure Fuse.js
+      // Adjust keys and thresholds as needed
+      const fuseOptions = {
+        // isCaseSensitive: false,
+        // includeScore: false,
+        // shouldSort: true,
+        // includeMatches: false,
+        // findAllMatches: false,
+        // minMatchCharLength: 1,
+        // location: 0,
+        threshold: 0.5, // Lower for stricter matches, higher for looser
+        // distance: 100,
+        // useExtendedSearch: false,
+        // ignoreLocation: false,
+        // ignoreFieldNorm: false,
+        // fieldNormWeight: 1,
+        keys: [ // What fields to search in
+          "name",
+          "singer"
+        ]
+      };
+
+      //const Fuse = require('fuse.js');
+      console.log(copyShuffle(songList));
+      const fuse = new Fuse(songList, fuseOptions);
+
+      // 2. Listen for input
+      searchInput.addEventListener('input', function (e) {
+        const query = e.target.value;
+        resultsContainer.innerHTML = ''; // Clear previous results
+        if (query.trim() === '') {
+          //const table = songList2Table(copyShuffle(songList));
+          //resultsContainer.appendChild(table);
+          return; // Do nothing if input is empty
+        }
+
+        // 3. Perform search
+        const results = fuse.search(query);
+        //console.log(results);
+
+        // 4. Display results
+        if (results.length > 0) {
+          const table = document.createElement('table');
+          // Create table header (thead and tr, th elements)
+          const thead = document.createElement('thead');
+          const headerRow = document.createElement('tr');
+
+          const headers = ['代碼', '歌名', '歌手'];
+          headers.forEach(headerText => {
+            const th = document.createElement('th');
+            th.textContent = headerText;
+            headerRow.appendChild(th);
+          });
+          thead.appendChild(headerRow);
+          table.appendChild(thead);
+
+          // Create table body (tbody and tr, td elements)
+          const tbody = document.createElement('tbody');
+
+          const data = [
+            { code: 23928, name: '阿女阿女', city: '謝明明' },
+            { code: 99183, name: '時尚婚紗', city: '唐多論' },
+            { code: 17591, name: '明星撞球場', city: '吳彰化' },
+          ];
+
+          //data.forEach(rowData => {
+          //  const row = document.createElement('tr');
+          //  for (const key in rowData) {
+          //    const td = document.createElement('td');
+          //    td.textContent = rowData[key];
+          //    row.appendChild(td);
+          //  }
+          //  tbody.appendChild(row);
+          //});
+          results.forEach(result => {
+            const row = document.createElement('tr');
+
+            const codeTd = document.createElement('td');
+            const nameTd = document.createElement('td');
+            const singerTd = document.createElement('td');
+            codeTd.textContent = result.item.code
+            nameTd.textContent = result.item.name
+            singerTd.textContent = result.item.singer
+            row.appendChild(codeTd);
+            row.appendChild(nameTd);
+            row.appendChild(singerTd);
+            tbody.appendChild(row);
+          });
+          table.appendChild(tbody);
+
+          // Add some basic styling (optional)
+          table.style.borderCollapse = 'collapse';
+          table.style.width = '70%';
+          table.querySelectorAll('th, td').forEach(cell => {
+            cell.style.border = '1px solid black';
+            cell.style.padding = '8px';
+            cell.style.textAlign = 'left';
+          });
+          //table.querySelector('th').style.backgroundColor = '#f2f2f2';
+
+          resultsContainer.appendChild(table);
+
+          //const ul = document.createElement('ul');
+          //results.forEach(result => {
+          //  const li = document.createElement('li');
+          //  li.textContent = `${result.item.name} - ${result.item.singer} (code: ${result.item.code})`;
+          //  ul.appendChild(li);
+          //});
+          //resultsContainer.appendChild(ul);
+        } else {
+          resultsContainer.innerHTML = '<p>No results found.</p>';
+        }
+      });
+    });
+  </script>
+{{ end }}

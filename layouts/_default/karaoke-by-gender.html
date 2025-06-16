@@ -1,0 +1,91 @@
+{{ define "main" }}
+  {{ partial "title.html" . }}
+  <form id="singerCategories">
+    <fieldset>
+      <center>
+        <legend class="category">先點選要尋找的歌手類別</legend>
+
+        <div>
+          <input type="radio" id="categoryFemale" name="gender" value="female" class="category" checked />
+          <label for="categoryFemale">女</label>
+        </div>
+
+        <div>
+          <input type="radio" id="categoryMale" name="gender" value="male" class="category" />
+          <label for="categoryMale">男</label>
+        </div>
+
+        <div>
+          <input type="radio" id="categoryGroup" name="gender" value="group" class="category" />
+          <label for="categoryGroup">團體</label>
+        </div>
+
+        <!--
+        <div>
+          <input type="radio" id="categoryTogether" name="gender" value="together" class="category" />
+          <label for="categoryTogether">合唱</label>
+        </div>
+        -->
+      </center>
+    </fieldset>
+  </form>
+
+  {{/* Which is better? block,none,inline,etc */}}
+  <div id="female-singers" style="display: block;">
+    {{ partial "display-singers-by-gender.html" "female"}}
+  </div>
+  <div id="male-singers" style="display: none;">
+    {{ partial "display-singers-by-gender.html" "male"}}
+  </div>
+  <div id="group-singers" style="display: none;">
+    {{ partial "display-singers-by-gender.html" "group"}}
+  </div>
+
+  <script>
+    //document.getElementsByName('gender').forEach(radio => {
+    //  radio.addEventListener('change', function (){
+
+    //    const femaleTable = document.getElementById('female-singers');
+    //    const maleTable = document.getElementById('male-singers');
+    //    const groupTable = document.getElementById('group-singers');
+
+    //    femaleTable.style.display = 'none';
+    //    maleTable.style.display = 'none';
+    //    groupTable.style.display = 'none';
+
+    //    const selectedValue = this.value;
+    //    if ( selectedValue === 'female' ) {
+    //      femaleTable.style.display = 'block';
+    //      console.log(femaleTable);
+    //    } else if ( selectedValue === 'male' ) {
+    //      maleTable.style.display = 'block';
+    //      console.log(maleTable);
+    //    } else if ( selectedValue === 'group' ) {
+    //      groupTable.style.display = 'block';
+    //      console.log(groupTable);
+    //    }
+    //  });
+    //});
+
+    document.getElementById('singerCategories').addEventListener('change', function(event) {
+      if (event.target.type === 'radio') {
+        const femaleTable = document.getElementById('female-singers');
+        const maleTable = document.getElementById('male-singers');
+        const groupTable = document.getElementById('group-singers');
+
+        femaleTable.style.display = 'none';
+        maleTable.style.display = 'none';
+        groupTable.style.display = 'none';
+
+        const selectedValue = event.target.value;
+        if ( selectedValue === 'female' ) {
+          femaleTable.style.display = 'block';
+        } else if ( selectedValue === 'male' ) {
+          maleTable.style.display = 'block';
+        } else if ( selectedValue === 'group' ) {
+          groupTable.style.display = 'block';
+        }
+      }
+    });
+  </script>
+{{ end }}

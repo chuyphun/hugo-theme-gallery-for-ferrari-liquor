@@ -17,12 +17,35 @@ A very simple and opinionated photo gallery theme for Hugo.
         - <https://gohugo.io/functions/images/filter/#image-filters>
             - <https://gohugo.io/functions/images/text/>
         - <https://gohugo.io/content-management/image-processing/>
+- Karaoke
+    - [ ] Consider ethicality of both phone users and computer users
+        - e.g. maybe (\# of columns) of a table should vary according to whether
+          you're using a smartphone to view the page, portrait or landscape view, etc.
+    - Functions
+        - `karaoke-by-gender.html`
+            - [ ] Clicked singer td becomes purple
+            - [ ] Refocus after radio selection and after singer click
+            - [ ] Re-selection of radio (gender) should probably hide song table of previous singer
+    - Refactoring
+        - [ ] Maybe regroup all `fuseOptions` in a single file/place?
+        - [ ] naming
+            - [ ] HTML class, id naming unification
+                - [ ] CSS accordingly
+            - [ ] JS variable naming unification
+    - Bugs
+        - [ ] Table of female singers contains an empty td
 - Figure out some Hugo stuffs
     - [ ] Why `Minify` and `Fingerprint`?
       ```hugo
       {{ $script := resources.Get "js/age-verification.js" | resources.Minify | resources.Fingerprint }}
       <script src="{{ $script.Permalink }}"></script>
       ```
+
+
+## Learning Resources?
+
+- [tailwind](https://tailwindcss.com)
+    - <https://shuffle.dev/tailwind/classes/text-color/text-blue-500>
 
 
 ## Features

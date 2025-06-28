@@ -14,6 +14,10 @@ th, td {
   text-align: center;
 }
 
+th {
+  background-color: #2563ea;
+}
+
 tr.fuzzy-found-songs:hover {
   /*cursor: pointer;*/
   background-color: #405257;

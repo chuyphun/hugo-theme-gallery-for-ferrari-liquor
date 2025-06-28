@@ -1,4 +1,8 @@
-form#singerCategories, caption {
+html {
+  scroll-behavior: smooth;
+}
+
+form#singerCategories, caption, p.singer-grid-caption {
   font-size: 1.125rem;
   /*text-align: left;*/
 }
@@ -12,6 +16,96 @@ input.category {
   vertical-align: middle;
   font-size: 5.125rem;
 }
+
+p.singer-grid-caption {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.singer-grid {
+  width: 80%;
+  margin: 30px;
+  display: grid;
+  gap: 15px;
+  padding: 10px;
+  /*background-color: #fff;*/
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.singer-item {
+  background-color: #e0f7fa; /* Light blue background */
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.1em;
+  color: #00796b; /* Dark teal text */
+  font-weight: bold;
+  border: 1px solid #b2ebf2; /* Subtle border */
+  transition: transform 0.2s ease, background-color 0.2s ease; /* Smooth hover effects */
+}
+
+.singer-item:hover {
+  transform: translateY(-3px); /* Slight lift on hover */
+  background-color: #b2ebf2;
+  cursor: pointer;
+}
+
+/* --- Media Queries for different screen sizes and orientations --- */
+
+/* Smartphone (Portrait - Default 1-2 columns) */
+/* The base style already handles this, but you can explicitly set it */
+@media (max-width: 480px) { /* Smaller phones, portrait */
+    .singer-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* 1 or 2 columns, adjust minmax as needed */
+    }
+    .singer-item {
+        font-size: 1em;
+        padding: 12px;
+    }
+}
+
+/* Smartphone (Landscape) and Small Tablets (Portrait) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .singer-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap: 20px;
+    }
+    .singer-item {
+        font-size: 1.1em;
+    }
+}
+
+/* Tablets (Landscape) and Small Laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .singer-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns */
+        gap: 25px;
+    }
+    .singer-item {
+        font-size: 1.2em;
+    }
+}
+
+/* Laptops and Desktops */
+@media (min-width: 1025px) {
+    .singer-grid {
+        grid-template-columns: repeat(4, 1fr); /* 5 columns */
+        gap: 30px;
+    }
+    .singer-item {
+        font-size: 1.3em;
+    }
+}
+
+/* Optional: Specific adjustments for very large screens */
+@media (min-width: 1400px) {
+    .singer-grid {
+        grid-template-columns: repeat(5, 1fr); /* 6 columns */
+    }
+}
+
+
 
 table.my-entry-table {
   width: 80%;
@@ -37,4 +131,9 @@ td.clickable:hover {
   cursor: pointer;
   /*background-color: #e0f2f7;*/
   background-color: #405257;
+}
+
+div#songs-container {
+  /*margin-bottom: 30px;*/
+  margin: 30px;
 }

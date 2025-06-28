@@ -9,7 +9,22 @@
     {{- $entries := split $rawContent "\n" -}}
 
     {{- if $entries -}}
-      <table class="my-entry-table">
+
+      {{/* Go the grid way */}}
+      <p class="singer-grid-caption">再點選歌手</p>
+      <div class="singer-grid">
+        {{- range $name := $entries -}}
+          {{- if $name -}}
+            <div class="singer-item">
+              {{- $name -}}
+            </div>
+          {{- end -}}
+        {{- end -}}
+      </div>
+
+
+      {{/* Or go the table way */}}
+      <table class="my-entry-table hidden">
         <caption>再點選歌手</caption>
         <tbody>
           {{- $columnsPerRow := 4 -}}

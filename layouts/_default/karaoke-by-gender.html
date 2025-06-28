@@ -41,7 +41,29 @@
     {{ partial "display-singers-by-gender.html" "group"}}
   </div>
 
+  {{/* Display all songs of the clicked singer */}}
+  <center>
+    <div id="songs-container">
+      <h2 id="songs-container-title">
+      </h2>
+    </div>
+  </center>
+
+
+  {{/* Javascript to display singers */}}
   {{- with resources.Get "js/gender-radio-button-reaction.js" | resources.Minify | resources.Fingerprint -}}
     <script src="{{ .Permalink }}"></script>
   {{- end -}}
+
+
+  {{/* Javascript to display songs */}}
+  {{ $jsonSlice := partial "jsonl2slice.html" "karaoke/hongyin/songs.jsonl" }}
+  <script>
+    const allSongs = JSON.parse('{{ $jsonSlice | jsonify | safeJS }}');
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
+  {{- with resources.Get "js/singer-name-click-reaction.js" | js.Build -}}
+    <script src="{{ .Permalink }}"></script>
+  {{- end -}}
+
 {{ end }}

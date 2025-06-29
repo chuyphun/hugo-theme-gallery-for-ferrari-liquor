@@ -1,17 +1,20 @@
 input#search-input {
-  font-size: 24px;
+  /*font-size: 24px;*/
+  font-size: 1.5rem;
 }
 
 table.fuzzy-found-songs {
   border-collapse: collapse;
-  width: 80%;
+  width: 90%;
   table-layout: fixed;
 }
 
 th, td {
-  border: 1px solid black;
+  border: 1px solid white;
   padding: 8px;
   text-align: center;
+  /*font-size: 24px;*/
+  font-size: 1.5rem;
 }
 
 th {
@@ -26,4 +29,6 @@ tr.fuzzy-found-songs:hover {
 div#results-container {
   /*margin-bottom: 30px;*/
   margin: 30px;
+  max-height: 30rem;
+  overflow-y: auto;
 }

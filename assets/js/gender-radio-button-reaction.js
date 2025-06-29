@@ -38,6 +38,9 @@ document.getElementById('singerCategories').addEventListener('change', function(
     maleTable.style.display = 'none';
     groupTable.style.display = 'none';
 
+    const singerGridCaption = document.querySelector('p.singer-grid-caption');
+    //console.log(singerGridCaption);
+
     const selectedValue = event.target.value;
     if ( selectedValue === 'female' ) {
       femaleTable.style.display = 'block';
@@ -46,5 +49,12 @@ document.getElementById('singerCategories').addEventListener('change', function(
     } else if ( selectedValue === 'group' ) {
       groupTable.style.display = 'block';
     }
+
+    //singerGridCaption.focus();
+    //singerGridCaption.scrollIntoView({behavior: 'smooth', block: 'start'});
+    /*
+    setTimeout(() => {
+      singerGridCaption.scrollIntoView({behavior: 'smooth', block: 'start'});
+    }, 100);*/
   }
 });

@@ -9,7 +9,6 @@ const fuseOptions = {
 
 const fuse = new Fuse(allSongs, fuseOptions);
 
-// Go the grid way
 const singerItems = document.querySelectorAll('div.singer-item');
 console.log(singerItems);
 // Add a click event listener to each singer item
@@ -20,29 +19,6 @@ singerItems.forEach(item => {
     //item.style.color = '#990000';
     //console.log(item);
     const singerName = item.textContent;
-    if (singerName) {
-      displayTheirSongs(singerName);
-    }
-  });
-});
-
-
-// Or go the table way
-const singerTds = document.querySelectorAll('td.clickable');
-//console.log(singerTds[0]);
-//const singerTdBlueColor = document.querySelector('td.clickable').style.color;
-//console.log(singerTdBlueColor);
-//console.log(document.querySelector('td.clickable').style);
-
-// Add a click event listener to each singer TD
-singerTds.forEach(td => {
-  td.addEventListener('click', (event) => {
-    //const singerName = event.currentTarget.dataset
-    console.log(event);
-    //td.style.color = '#990000';
-    td.style.color = 'purple';
-    //console.log(td);
-    const singerName = td.textContent;
     if (singerName) {
       displayTheirSongs(singerName);
     }

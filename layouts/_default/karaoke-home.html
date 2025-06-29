@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karaoke Home</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles to ensure 'Inter' font is used throughout */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c; /* Dark background for a karaoke vibe */
+            color: #e2e8f0; /* Light text for contrast */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Full viewport height */
+            margin: 0;
+            padding: 20px; /* Add some padding around the content */
+            box-sizing: border-box; /* Include padding in element's total width and height */
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Main container centered on the page -->
+    <div class="flex flex-col items-center justify-center p-8 bg-gray-800 rounded-xl shadow-2xl max-w-md w-full">
+        <h1 class="text-5xl font-extrabold mb-10 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-center leading-tight">
+            {{- .Description -}}
+        </h1>
+
+        <!-- Link 1: Karaoke Songs -->
+        <a href="../karaoke-by-keyword"
+           class="w-full flex items-center justify-center px-8 py-5 mb-6 text-2xl font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl shadow-lg hover:from-blue-600 hover:to-indigo-700 transform hover:scale-105 transition duration-300 ease-in-out cursor-pointer focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-opacity-75">
+            🔑 關鍵字搜尋
+        </a>
+
+        <!-- Link 2: Record Karaoke -->
+        <a href="../karaoke-by-gender"
+           class="w-full flex items-center justify-center px-8 py-5 text-2xl font-semibold text-white bg-gradient-to-r from-green-500 to-teal-600 rounded-xl shadow-lg hover:from-green-600 hover:to-teal-700 transform hover:scale-105 transition duration-300 ease-in-out cursor-pointer focus:outline-none focus:ring-4 focus:ring-green-300 focus:ring-opacity-75">
+            ♀️性別
+            <!-- &rarr; &#x1f846; &#x1f832; &#x2ba9; &#x2933; -->
+            &#x2ba9;
+            歌手
+            &#x2ba9;
+            <!-- &#x2933; -->
+            歌曲♂️
+        </a>
+    </div>
+</body>
+</html>

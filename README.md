@@ -18,10 +18,16 @@ A very simple and opinionated photo gallery theme for Hugo.
             - <https://gohugo.io/functions/images/text/>
         - <https://gohugo.io/content-management/image-processing/>
 - Karaoke
-    - [ ] Consider ethicality of both phone users and computer users
-        - e.g. maybe (\# of columns) of a table should vary according to whether
-          you're using a smartphone to view the page, portrait or landscape view, etc.
+    - [ ] Remove age verification for karaoke users
+    - ethicality
+        - [ ] \(\# of columns\) of a table should vary according to whether
+              the user is using a smartphone or a laptop to view the page,
+              portrait or landscape view, etc.
+        - [ ] Table entries get overlapped.
     - Functions
+        - `karaoke-by-keyword.html`
+            - [ ] At text input field, fold smartphone keyboard once Enter key gets hit.
+            - [ ] Adjust table size according to viewing devices.
         - `karaoke-by-gender.html`
             - [ ] Clicked singer td becomes purple
             - [ ] Refocus after radio selection and after singer click

@@ -2,19 +2,26 @@ html {
   scroll-behavior: smooth;
 }
 
+/*
 form#singerCategories, caption, p.singer-grid-caption {
+  font-size: 1.125em;
+  color: #405257;
+}*/
+
+legend.category, p.singer-grid-caption {
   font-size: 1.125rem;
   /*text-align: left;*/
+  color: #708287;
 }
 
-legend.category, caption {
-  font-size: 1.125rem;
+legend.category {
   margin-bottom: 30px;
 }
 
 input.category {
   vertical-align: middle;
-  font-size: 5.125rem;
+  /*font-size: 5.125rem;*/
+  font-size: 20em;
 }
 
 p.singer-grid-caption {
@@ -31,6 +38,8 @@ p.singer-grid-caption {
   /*background-color: #fff;*/
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  max-height: 30rem;
+  overflow-y: auto;
 }
 
 .singer-item {
@@ -39,7 +48,8 @@ p.singer-grid-caption {
   border-radius: 5px;
   text-align: center;
   font-size: 1.1em;
-  color: #00796b; /* Dark teal text */
+  color: #00796b; /* jade color */
+  /*color: #4299e1;*/ /* blue color (like url links) */
   font-weight: bold;
   border: 1px solid #b2ebf2; /* Subtle border */
   transition: transform 0.2s ease, background-color 0.2s ease; /* Smooth hover effects */
@@ -47,7 +57,8 @@ p.singer-grid-caption {
 
 .singer-item:hover {
   transform: translateY(-3px); /* Slight lift on hover */
-  background-color: #b2ebf2;
+  background-color: #b2ebf2; /* Blue color */
+  /*background-color: #405257;*/ /* Gray color */
   cursor: pointer;
 }
 
@@ -105,35 +116,9 @@ p.singer-grid-caption {
     }
 }
 
-
-
-table.my-entry-table {
-  width: 80%;
-  font-size: 1.5rem;
-  /*border: 1.0px solid;*/
-  /*border-color: white;*/
-  border-collapse: collapse;
-  table-layout: fixed;
-  margin: 50px;
-}
-
-td.clickable {
-  text-align: center;
-  border: 1.0px solid;
-  border-color: white;
-}
-
-td.clickable {
-  color: #4299e1;
-}
-
-td.clickable:hover {
-  cursor: pointer;
-  /*background-color: #e0f2f7;*/
-  background-color: #405257;
-}
-
 div#songs-container {
   /*margin-bottom: 30px;*/
   margin: 30px;
+  max-height: 30rem;
+  overflow-y: auto;
 }

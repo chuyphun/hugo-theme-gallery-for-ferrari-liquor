@@ -4148,7 +4148,7 @@
 {"code":28284,"name":"我要唱歌","singer":"蔡義德","lang":"台"}
 {"code":28285,"name":"孤單的夜","singer":"鄔兆邦","lang":"台"}
 {"code":28286,"name":"朋友乾杯","singer":"王識賢+楊哲","lang":"台"}
-{"code":28287,"name":"月光","singer":"秀蘭瑪雅","lang":"台"}
+{"code":28287,"name":"傷心手指","singer":"秀蘭瑪雅","lang":"台"}
 {"code":28288,"name":"不通哭","singer":"戴梅君","lang":"台"}
 {"code":28289,"name":"離別酒杯","singer":"施文彬+梁一貞","lang":"台"}
 {"code":28290,"name":"出外的浪子","singer":"蔡義德","lang":"台"}
@@ -10959,7 +10959,7 @@
 {"code":84922,"name":"清空","singer":"王忻辰+蘇星婕","lang":"國"}
 {"code":84923,"name":"報應","singer":"戴羽彤","lang":"國"}
 {"code":84924,"name":"騙子","singer":"戴羽彤","lang":"國"}
-{"code":84925,"name":"别知己","singer":"海來阿木+阿呷拉古","lang":"國"}
+{"code":84925,"name":"別知己","singer":"海來阿木+阿呷拉古","lang":"國"}
 {"code":84926,"name":"我想要","singer":"蓋君炎","lang":"國"}
 {"code":84927,"name":"總有人","singer":"向思思","lang":"國"}
 {"code":84928,"name":"下一次哭","singer":"承桓","lang":"國"}
@@ -14841,8 +14841,8 @@
 {"code":93644,"name":"NO.1","singer":"王思佳","lang":"國"}
 {"code":93645,"name":"fly fly fly","singer":"王思佳","lang":"國"}
 {"code":93646,"name":"可惜沒如果","singer":"林俊傑","lang":"國"}
-{"code":93647,"name":"思念借過","singer":"龍千玉","lang":"台"}
 {"code":93647,"name":"手心的薔薇","singer":"林俊傑+鄧紫棋","lang":"國"}
+{"code":93647,"name":"思念借過","singer":"龍千玉","lang":"台"}
 {"code":93648,"name":"三個人的星系","singer":"吳勇濱+陳傑瑞","lang":"國"}
 {"code":93649,"name":"為你的寂寞唱歌","singer":"家家","lang":"國"}
 {"code":93650,"name":"不過失去了一點點","singer":"曾沛慈","lang":"國"}
@@ -15313,6 +15313,9 @@
 {"code":94148,"name":"無垢","singer":"李浩瑋","lang":"國"}
 {"code":94149,"name":"愛不愛我","singer":"邱軍","lang":"國"}
 {"code":94150,"name":"最後一次心碎","singer":"派偉俊","lang":"國"}
+{"code":94151,"name":"分合","singer":"Energy","lang":"國"}
+{"code":94152,"name":"真心話","singer":"李浩瑋","lang":"國"}
+{"code":94153,"name":"走心的歌","singer":"陳勢安","lang":"國"}
 {"code":94690,"name":"海","singer":"FS","lang":"國"}
 {"code":96004,"name":"Crazy","singer":"謝金燕","lang":"台"}
 {"code":96006,"name":"結果","singer":"張蓉蓉","lang":"台"}
@@ -18660,6 +18663,28 @@
 {"code":99362,"name":"愛你是不管時","singer":"詹雅雯","lang":"台"}
 {"code":99363,"name":"愛過的生份人","singer":"路秀蘭","lang":"台"}
 {"code":99364,"name":"勇氣就是你的靠山","singer":"林濬揚","lang":"台"}
+{"code":99365,"name":"月光","singer":"龍千玉","lang":"台"}
+{"code":99366,"name":"紅花","singer":"陳奕珊","lang":"台"}
+{"code":99367,"name":"望你","singer":"陳淑萍","lang":"台"}
+{"code":99368,"name":"貪心","singer":"陳子賢","lang":"台"}
+{"code":99369,"name":"最愛","singer":"陳英吉+潘姵莉","lang":"台"}
+{"code":99370,"name":"千年樹","singer":"賴富正","lang":"台"}
+{"code":99371,"name":"櫻花結","singer":"洪淑媚","lang":"台"}
+{"code":99372,"name":"你尚好膽","singer":"張秀卿","lang":"台"}
+{"code":99373,"name":"那走那喝","singer":"蔡秋鳳+拍謝少年+孫一軒+寂寞法蘭","lang":"台"}
+{"code":99374,"name":"若有來世","singer":"翁立友+唐儷","lang":"台"}
+{"code":99375,"name":"從今以後","singer":"郭婷筠","lang":"台"}
+{"code":99376,"name":"敬你一杯","singer":"洪榮宏+張瀞云","lang":"台"}
+{"code":99377,"name":"雞母餓餓","singer":"謝金晶","lang":"台"}
+{"code":99378,"name":"攏嘛是你","singer":"蔡義德+麗蓉","lang":"台"}
+{"code":99379,"name":"今夜再相見","singer":"廖偉志+余秀娟","lang":"台"}
+{"code":99380,"name":"老天放我過","singer":"楊哲+林姍","lang":"台"}
+{"code":99381,"name":"我還有勇氣","singer":"達特","lang":"台"}
+{"code":99382,"name":"純情的反背","singer":"葉諾帆","lang":"台"}
+{"code":99383,"name":"傷心的城市","singer":"葉諾帆","lang":"台"}
+{"code":99384,"name":"想你心就痛","singer":"詹雅雯","lang":"台"}
+{"code":99385,"name":"緣份感情線","singer":"洪榮宏+張瀞云","lang":"台"}
+{"code":99386,"name":"癡心女人情","singer":"玟靈","lang":"台"}
 {"code":99695,"name":"PRIDE","singer":"李吳兄弟","lang":"國"}
 {"code":99704,"name":"中國老總","singer":"閩南狼PYC","lang":"國"}
 {"code":99705,"name":"Local","singer":"玖壹壹","lang":"國"}

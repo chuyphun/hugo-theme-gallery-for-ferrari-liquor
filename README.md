@@ -23,7 +23,7 @@ A very simple and opinionated photo gallery theme for Hugo.
         - [ ] \(\# of columns\) of a table should vary according to whether
               the user is using a smartphone or a laptop to view the page,
               portrait or landscape view, etc.
-        - [ ] Table entries get overlapped.
+        - [ ] Table entries get overlapped. Maybe font should depend on screen size?
     - Functions
         - `karaoke-by-keyword.html`
             - [ ] At text input field, fold smartphone keyboard once Enter key gets hit.

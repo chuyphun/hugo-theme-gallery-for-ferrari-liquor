@@ -1,0 +1,94 @@
+/* General reset and font setup */
+/** {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}*/
+
+body {
+    /*font-family: 'Inter', sans-serif;*/
+  background-color: #1a202c; /* Dark background for karaoke vibe */
+  color: #e2e8f0; /* Light text for contrast */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Main container */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem; /* 32px, equivalent to p-8 */
+  background-color: #2d3748; /* bg-gray-800 */
+  border-radius: 0.75rem; /* rounded-xl */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* shadow-2xl */
+  max-width: 28rem; /* max-w-md */
+  width: 100%;
+}
+
+/* Heading */
+h1.karaoke-home {
+  font-size: 3rem; /* text-5xl */
+  font-weight: 800; /* font-extrabold */
+  margin-bottom: 2.5rem; /* mb-10 */
+  text-align: center;
+  line-height: 1.125; /* leading-tight */
+  background: linear-gradient(to right, #c084fc, #ec4899); /* bg-gradient-to-r from-purple-400 to-pink-600 */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Links */
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1.25rem 2rem; /* py-5 px-8 */
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 600; /* font-semibold */
+  color: #ffffff; /* text-white */
+  text-decoration: none;
+  border-radius: 0.75rem; /* rounded-xl */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out; /* transition duration-300 ease-in-out */
+  cursor: pointer;
+}
+
+/* First link: Karaoke Songs */
+.link-karaoke-songs {
+  background: linear-gradient(to right, #3b82f6, #4f46e5); /* bg-gradient-to-r from-blue-500 to-indigo-600 */
+  margin-bottom: 1.5rem; /* mb-6 */
+}
+
+.link-karaoke-songs:hover {
+  background: linear-gradient(to right, #2563eb, #4338ca); /* hover:from-blue-600 hover:to-indigo-700 */
+  transform: scale(1.05); /* hover:scale-105 */
+}
+
+.link-karaoke-songs:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.75); /* focus:ring-4 focus:ring-blue-300 focus:ring-opacity-75 */
+}
+
+/* Second link: Record Karaoke */
+.link-record-karaoke {
+  background: linear-gradient(to right, #10b981, #0d9488); /* bg-gradient-to-r from-green-500 to-teal-600 */
+}
+
+.link-record-karaoke:hover {
+  background: linear-gradient(to right, #059669, #0f766e); /* hover:from-green-600 hover:to-teal-700 */
+  transform: scale(1.05); /* hover:scale-105 */
+}
+
+.link-record-karaoke:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.75); /* focus:ring-4 focus:ring-green-300 focus:ring-opacity-75 */
+}

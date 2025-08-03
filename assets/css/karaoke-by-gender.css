@@ -67,53 +67,53 @@ p.singer-grid-caption {
 /* Smartphone (Portrait - Default 1-2 columns) */
 /* The base style already handles this, but you can explicitly set it */
 @media (max-width: 480px) { /* Smaller phones, portrait */
-    .singer-grid {
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* 1 or 2 columns, adjust minmax as needed */
-    }
-    .singer-item {
-        font-size: 1em;
-        padding: 12px;
-    }
+  .singer-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* 1 or 2 columns, adjust minmax as needed */
+  }
+  .singer-item {
+    font-size: 1em;
+    padding: 12px;
+  }
 }
 
 /* Smartphone (Landscape) and Small Tablets (Portrait) */
 @media (min-width: 481px) and (max-width: 768px) {
-    .singer-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns */
-        gap: 20px;
-    }
-    .singer-item {
-        font-size: 1.1em;
-    }
+  .singer-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+  }
+  .singer-item {
+    font-size: 1.1em;
+  }
 }
 
 /* Tablets (Landscape) and Small Laptops */
 @media (min-width: 769px) and (max-width: 1024px) {
-    .singer-grid {
-        grid-template-columns: repeat(4, 1fr); /* 4 columns */
-        gap: 25px;
-    }
-    .singer-item {
-        font-size: 1.2em;
-    }
+  .singer-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 25px;
+  }
+  .singer-item {
+    font-size: 1.2em;
+  }
 }
 
 /* Laptops and Desktops */
 @media (min-width: 1025px) {
-    .singer-grid {
-        grid-template-columns: repeat(4, 1fr); /* 5 columns */
-        gap: 30px;
-    }
-    .singer-item {
-        font-size: 1.3em;
-    }
+  .singer-grid {
+    grid-template-columns: repeat(4, 1fr); /* 5 columns */
+    gap: 30px;
+  }
+  .singer-item {
+    font-size: 1.3em;
+  }
 }
 
 /* Optional: Specific adjustments for very large screens */
 @media (min-width: 1400px) {
-    .singer-grid {
-        grid-template-columns: repeat(5, 1fr); /* 6 columns */
-    }
+  .singer-grid {
+    grid-template-columns: repeat(5, 1fr); /* 6 columns */
+  }
 }
 
 div#songs-container {

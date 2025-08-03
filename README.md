@@ -19,6 +19,11 @@ A very simple and opinionated photo gallery theme for Hugo.
         - <https://gohugo.io/content-management/image-processing/>
 - Karaoke
     - [ ] Remove age verification for karaoke users
+    - general
+        - [ ] Ordering of the songs in `assets/karaoke/hongyin/songs.jsonl`
+            - As of 2025/07/23, I use string ordering, which implies  
+              `"1991" < "19912345" < "1992" < "19921"`  
+              Please decide whether to change this behavior.
     - ethicality
         - [ ] \(\# of columns\) of a table should vary according to whether
               the user is using a smartphone or a laptop to view the page,
@@ -32,6 +37,7 @@ A very simple and opinionated photo gallery theme for Hugo.
             - [ ] Clicked singer td becomes purple
             - [ ] Refocus after radio selection and after singer click
             - [ ] Re-selection of radio (gender) should probably hide song table of previous singer
+            - [ ] When cursor move over a gender, there should be evident (e.g. color) reaction to help user recognize
     - Refactoring
         - [ ] Maybe regroup all `fuseOptions` in a single file/place?
         - [ ] naming

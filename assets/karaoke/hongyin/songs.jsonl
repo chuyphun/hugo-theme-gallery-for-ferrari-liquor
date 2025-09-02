@@ -4540,7 +4540,6 @@
 {"code":"28754","name":"靈魂的侶伴","singer":"莊振凱+曾心梅","lang":"台"}
 {"code":"28755","name":"思念故鄉的伊","singer":"蘇錦煌","lang":"台"}
 {"code":"28758","name":"親情","singer":"楊淑慎","lang":"台"}
-{"code":"28759","name":"紀念品","singer":"曾心梅","lang":"台"}
 {"code":"28760","name":"已經無愛","singer":"曾心梅","lang":"台"}
 {"code":"28761","name":"望你疼惜","singer":"林郁庭","lang":"台"}
 {"code":"28762","name":"愛甲後悔","singer":"崔慧萍","lang":"台"}
@@ -6312,7 +6311,7 @@
 {"code":"57146","name":"Escape","singer":"Rupert Holmes","lang":"英"}
 {"code":"57147","name":"Hazard","singer":"Richard Marx","lang":"英"}
 {"code":"57148","name":"Endless Love","singer":"Lionel Richie+Diana Ross","lang":"英"}
-{"code":"57149","name":"Everybody Hurts","singer":"REM","lang":"英"}
+{"code":"57149","name":"Everybody Hurts","singer":"R.E.M.","lang":"英"}
 {"code":"57150","name":"Get Here","singer":"Oleta Adams","lang":"英"}
 {"code":"57151","name":"Happy Birthday","singer":"大合唱","lang":"英"}
 {"code":"57152","name":"La Bamba","singer":"Ritchie Valens","lang":"英"}
@@ -6323,7 +6322,7 @@
 {"code":"57157","name":"Around The World","singer":"張菲","lang":"英"}
 {"code":"57158","name":"Broken Hearted Me","singer":"England Dan+John Ford Coley","lang":"英"}
 {"code":"57159","name":"Crazy For You","singer":"Madonna","lang":"英"}
-{"code":"57160","name":"Losing My Religion","singer":"REM","lang":"英"}
+{"code":"57160","name":"Losing My Religion","singer":"R.E.M.","lang":"英"}
 {"code":"57161","name":"Now And Forever","singer":"Richard Marx","lang":"英"}
 {"code":"57162","name":"Right Here Waiting","singer":"Richard Marx","lang":"英"}
 {"code":"57163","name":"You Are Everything","singer":"Marvin Gaye+Diana Ross","lang":"英"}
@@ -6332,7 +6331,7 @@
 {"code":"57166","name":"Be Bop A Lula","singer":"Gene Vincent","lang":"英"}
 {"code":"57167","name":"Great Balls Of Fire","singer":"Jerry Lee Lewis","lang":"英"}
 {"code":"57168","name":"I ll Be Your Everything","singer":"Tommy Page","lang":"英"}
-{"code":"57169","name":"Man On The Moon","singer":"REM","lang":"英"}
+{"code":"57169","name":"Man On The Moon","singer":"R.E.M.","lang":"英"}
 {"code":"57170","name":"Rhythm of the rain","singer":"Jason Donovan","lang":"英"}
 {"code":"57171","name":"Hold On To The Nights","singer":"Richard Marx","lang":"英"}
 {"code":"57172","name":"Wind Beneath My Wings","singer":"Bette Midler","lang":"英"}
@@ -15356,7 +15355,32 @@
 {"code":"94154","name":"如果可以","singer":"韋禮安","lang":"國"}
 {"code":"94155","name":"這麼多年","singer":"陳華","lang":"國"}
 {"code":"94156","name":"有沒有人告訴你","singer":"陳楚生","lang":"國"}
+{"code":"94157","name":"最好的安排","singer":"曲婉婷","lang":"國"}
+{"code":"94158","name":"如果愛忘了","singer":"戚薇","lang":"國"}
+{"code":"94159","name":"今夜我又想起你","singer":"吳木","lang":"國"}
+{"code":"94160","name":"美好的事可不可以發生在我身上","singer":"康士坦的變化球","lang":"國"}
 {"code":"94690","name":"海","singer":"FS","lang":"國"}
+{"code":"95000","name":"老伴","singer":"蔡秋鳳","lang":"台"}
+{"code":"95001","name":"問情","singer":"陳怡婷","lang":"台"}
+{"code":"95002","name":"演歌","singer":"詹雅雯","lang":"台"}
+{"code":"95003","name":"飲乎茫","singer":"黃偉霖","lang":"台"}
+{"code":"95004","name":"心換心","singer":"柯俊傑+楊靜","lang":"台"}
+{"code":"95005","name":"酸米草","singer":"莉芝","lang":"台"}
+{"code":"95006","name":"愛的良藥","singer":"蔡義德+陳怡婷","lang":"台"}
+{"code":"95007","name":"一腳舊鞋","singer":"阿吉仔","lang":"台"}
+{"code":"95008","name":"南國之戀","singer":"七郎","lang":"台"}
+{"code":"95009","name":"愛的情淚","singer":"陳子賢+謝莉婷","lang":"台"}
+{"code":"95010","name":"無夢無望","singer":"王識賢","lang":"台"}
+{"code":"95011","name":"情深緣盡","singer":"李明洋+王瑞霞","lang":"台"}
+{"code":"95012","name":"幸福仙丹","singer":"廖偉志+余秀娟","lang":"台"}
+{"code":"95013","name":"一人一款命","singer":"翁立友","lang":"台"}
+{"code":"95014","name":"想你的形影","singer":"草屯囝仔","lang":"台"}
+{"code":"95015","name":"愛甲剩怨嘆","singer":"林姍","lang":"台"}
+{"code":"95016","name":"夜間部同學","singer":"彭正+郭婷筠","lang":"台"}
+{"code":"95017","name":"熱戀彼下埔","singer":"陳水清","lang":"台"}
+{"code":"95018","name":"猶原愛綿綿","singer":"洪榮宏+張瀞云","lang":"台"}
+{"code":"95019","name":"花開彼一暝","singer":"葉諾帆+林琇琪","lang":"台"}
+{"code":"95020","name":"吹遍曠野的風","singer":"風采輪","lang":"台"}
 {"code":"96004","name":"Crazy","singer":"謝金燕","lang":"台"}
 {"code":"96006","name":"結果","singer":"張蓉蓉","lang":"台"}
 {"code":"96007","name":"走若飛","singer":"蔡義德+張蓉蓉","lang":"台"}
@@ -18015,8 +18039,8 @@
 {"code":"98675","name":"歡喜乾杯","singer":"方千玉","lang":"台"}
 {"code":"98676","name":"心內的故事","singer":"吳俊宏","lang":"台"}
 {"code":"98677","name":"幸福的甜蜜","singer":"謝宜君","lang":"台"}
-{"code":"98678","name":"頭家妞妞舞","singer":"新寶島康樂隊","lang":"台"}
 {"code":"98678","name":"愛作夢的貓","singer":"黃妃","lang":"台"}
+{"code":"98678","name":"頭家妞妞舞","singer":"新寶島康樂隊","lang":"台"}
 {"code":"98679","name":"戀戀東北岸","singer":"張秀卿","lang":"台"}
 {"code":"98680","name":"草螟仔弄春風","singer":"鄔兆邦+唐儷","lang":"台"}
 {"code":"98681","name":"獨身仔的生活","singer":"翁立友","lang":"台"}
